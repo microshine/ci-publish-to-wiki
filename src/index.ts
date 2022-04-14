@@ -1,9 +1,14 @@
-export type GenericType<T> = Record<string, T>;
 
-export abstract class Base {
+export interface Named {
   /**
    * The name of the object
    */
+  readonly name: string
+}
+
+export type GenericType<T> = Record<string, T>;
+
+export abstract class Base implements Named {
   public abstract readonly name: string;
 }
 
