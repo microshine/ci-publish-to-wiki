@@ -10,5 +10,11 @@
     "typedoc-github-wiki-theme"
   ],
   "excludePrivate": true,
-  "categorizeByGroup": true
+  "categorizeByGroup": true,
+
+  "hideBreadcrumbs": false,
+  "hideInPageTOC": false,
+  "hideMembersSymbol": false,
+  "namedAnchors": true,
+  "preserveAnchorCasing": false
 }
