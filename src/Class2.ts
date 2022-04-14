@@ -37,11 +37,12 @@ export class Class2 extends Class1 {
 
   /**
    * Generic function declaration
+   * @defaultValue defaultValue Default value
    * @returns Map with preset default value
    */
-  public genericFunction<T extends Base>(param: T): GenericType<T> {
+  public genericFunction<T extends Base>(defaultValue: T): GenericType<T> {
     return {
-      default: param,
+      default: defaultValue,
     };
   }
 
