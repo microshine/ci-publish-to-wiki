@@ -1,3 +1,5 @@
+export type GenericType<T> = Record<string, T>;
+
 export abstract class Base {
   /**
    * The name of the object
@@ -65,6 +67,17 @@ export class Class2 extends Class1 {
   public isEqual(other: unknown): other is this {
     return other instanceof Class2 && other.name === this.name;
   }
+
+  /**
+   * Generic function declaration
+   * @returns Map with preset default value
+   */
+  public genericFunction<T extends Base>(param: T): GenericType<T> {
+    return {
+      default: param,
+    };
+  }
+
 }
 
 export class Class3 extends Base {
