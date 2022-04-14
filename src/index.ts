@@ -36,6 +36,14 @@ export class Class1 extends Base {
 
 /**
  * Represents Class2
+ * 
+ * ```asn
+ * CertificateTemplateOID ::= SEQUENCE {
+ *    templateID              OBJECT IDENTIFIER,
+ *    templateMajorVersion    INTEGER (0..4294967295) OPTIONAL,
+ *    templateMinorVersion    INTEGER (0..4294967295) OPTIONAL
+ * }
+ * ```
  */
 export class Class2 extends Class1 {
   public override name = "Class2";
@@ -44,6 +52,15 @@ export class Class2 extends Class1 {
    * Compares the current object with the other object
    * @param other Other object
    * @returns Returns `true` if objects are equal
+   * @example
+   * Some text for the example
+   * ```ts
+   * const class2 = new Class2();
+   * 
+   * if (class2.isEqual(otherClass)) {
+   *   // do something
+   * }
+   * ```
    */
   public isEqual(other: unknown): other is this {
     return other instanceof Class2 && other.name === this.name;
