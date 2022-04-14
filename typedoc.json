@@ -3,8 +3,12 @@
   "entryPoints": [
     "./src/index.ts"
   ],
+  "theme": "github-wiki",
   "out": "docs",
-  "plugin": "typedoc-plugin-markdown",
+  "plugin": [
+    "typedoc-plugin-markdown",
+    "typedoc-github-wiki-theme"
+  ],
   "excludePrivate": true,
   "categorizeByGroup": true
 }
