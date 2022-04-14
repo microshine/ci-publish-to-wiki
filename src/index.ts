@@ -1,6 +1,6 @@
 export abstract class Base {
   /**
-   * 
+   * The name of the object
    */
   public abstract readonly name: string;
 }
