@@ -46,4 +46,15 @@ export class Class2 extends Class1 {
     };
   }
 
+  /**
+   * Validates that incoming parameter is type of {@link Class2}
+   * @param data Any data
+   * @throws Throws TypeError if `data` is not {@link Class2}
+   */
+  public assert(data: unknown) : asserts data is Class2 {
+    if (typeof data !== "string") {
+      throw new TypeError("Incorrect type of 'data' parameter");
+    }
+  }
+
 }
