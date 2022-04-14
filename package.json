@@ -1,0 +1,26 @@
+{
+  "name": "ci-publish-to-wiki",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:docs": "typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microshine/ci-publish-to-wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microshine/ci-publish-to-wiki/issues"
+  },
+  "homepage": "https://github.com/microshine/ci-publish-to-wiki#readme",
+  "devDependencies": {
+    "typedoc": "^0.22.15",
+    "typedoc-plugin-markdown": "^3.12.0",
+    "typescript": "^4.6.3"
+  }
+}
