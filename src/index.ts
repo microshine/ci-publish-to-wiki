@@ -12,20 +12,41 @@ export class Class1 extends Base {
     return `Param: ${param}`;
   }
 
-  public protectedMethod(param?: number): string {
+  protected protectedMethod(param?: number): string {
+    this.privateMethod();
+
     return `Param: ${param}`;
   }
 
-  public privateMethod(param = false): string {
+  private privateMethod(param = false): string {
     return `Param: ${param}`;
+  }
+
+
+  /**
+   * Usage of default parameters
+   * @param name Some name
+   * @param value Some value
+   * @param required Determine if `value` is required
+   */
+  public default(name: string | symbol, value = 0, required?: boolean) {
+    console.log(name, value, required);
   }
 }
 
+/**
+ * Represents Class2
+ */
 export class Class2 extends Class1 {
   public override name = "Class2";
 
-  public isEqual(data: unknown): data is this {
-    return data instanceof Class2 && data.name === this.name;
+  /**
+   * Compares the current object with the other object
+   * @param other Other object
+   * @returns Returns `true` if objects are equal
+   */
+  public isEqual(other: unknown): other is this {
+    return other instanceof Class2 && other.name === this.name;
   }
 }
 
