@@ -12,6 +12,7 @@
   "excludePrivate": true,
   "categorizeByGroup": true,
 
+  "entryDocument": "src/README.md",
   "hideBreadcrumbs": false,
   "hideInPageTOC": false,
   "hideMembersSymbol": false,
